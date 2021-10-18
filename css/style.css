@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+.header{
+    height: 1vh;
+    
+}
+
+.checkFloat{
+    width: 100%;
+    height: 20px;
+    margin-top: 20px;
+}
+.logo {
+    float: left;
+    height: 70px;
+    width: 85px;
+    margin-bottom: 0%;
+}
+
+.leftFloat{
+    width:50%;
+    margin-bottom: 0%;
+    align-items: center;
+    float:left;
+    /* padding-left: 10px; */
+}
+
+.rightFloat{
+    width:30%;
+    height: auto;
+    margin-bottom: 0%;
+    align-items: center;
+    float:right;
+}
+
+li{
+    list-style: none;
+    margin: 7px 2px;
+    transition: .5s;
+    float: right;
+}
+
+
+li:hover {
+    color :grey;
+    transition: .5s;
+}
+
+.top2{
+    background-color:rgb(221, 221, 221);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+}
+
+.top2Kanan{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 5px;
+    width: 120px;
+}
+
+
+.button {
+    background-color: #808080; 
+    border: none;
+    color: white;
+    padding: 8px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    border-radius: 8px;
+  }
+  
+.button:hover {
+    background-color: #000000; /* Green */
+    color: rgb(226, 226, 226);
+}
+
+
+.middle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.middle .middleKiri{
+    border-width: 1px;
+    border-right-style: solid;
+    border-color: black;
+
+    height: 770px;
+    width: 270px;
+    
+}
+
+.middleKiri{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.middle .middleTengah{
+    background-color: rgb(236, 236, 236);
+    height: auto;
+    width: 1380px;
+}
+
+.middle .middleKanan{
+    border-width: 1px;
+    border-left-style: solid;
+    border-color: black;
+
+    height: 770px;
+    width: 270px;
+}
+
+.middleTengah{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.middleTengah .canvas{
+    background-color:white;
+    height: 600px;
+    width: 1067px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.middleKanan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.middleKanan img{
+    height: 100px;
+    width: 180px;
+    padding: 10px;
+
+}
+
+#canvas2{
+    background-color:white;
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    background-color:lightgray;
+    padding: 10px;
+    align-items: center;
+    bottom:0;
+}
+
+/* canvas */
+/* body{
+    margin: 0px;
+    padding: 30px;
+    overflow: hidden;
+    background: #313131;
+} */
+
+canvas{
+    height: 600px;
+    width: 1067px;
+    box-shadow: -1px 1px 6px 1px black;
+    cursor: pointer;
+    /* background-color: white; */
+}
+
+ .input-box input{
+    height: 60px;
+    width: 100%;
+    outline: none;
+    border: 3px;
+    border: 1px solid grey;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition:  all 0.3s ease;
+}
+
+.tools{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.tools .color-field{
+    height: 40px;
+    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+    cursor: pointer;
+    display: inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid black;
+    align-self: center;
+    margin: 0 10px;
+}
+
+.tools .button{
+    align-self: center;
+    width: 100px;
+    height: 40px;
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    color: white;
+    background: #222;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.color-picker{
+    align-self: center;
+    margin: 0 10px;
+    height: 50px;
+}
+
+.pen-range{
+    align-self: center;
+    margin: 0 10px;
+}
+
+/* dragable div */
+#mydiv ,#mydiv2 {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+  }
+  
+.bisa-pindah{
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    text-align: center;
+    width: auto;
+    height: auto;
+  }
+
+#mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+}
+
+/* text */
+#text {
+    border: none;
+    border-color: transparent;
+}
+/* 
+  filterable element */
+.container {
+    overflow: hidden;
+}
+  
+.filterDiv {
+    float: left;
+    color: #ffffff;
+    width: 107px;
+    height: 60px;
+    text-align: center;
+    padding: 10px;
+    margin: 2px;
+    display: none; /* Hidden by default */
+}
+  
+  /* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+  
+  /* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+  
+  /* Add a light grey background on mouse-over */
+.btn:hover {
+    background-color: #ddd;
+}
+  
+  /* Add a dark background to the active button */
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+  
+  /* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+  
+  /* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+  
+  /* Add a light grey background on mouse-over */
+.btn:hover {
+    background-color: #ddd;
+}
+  
+  /* Add a dark background to the active button */
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+#myBtnContainer2{
+    cursor: pointer;
+}
